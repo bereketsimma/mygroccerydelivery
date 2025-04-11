@@ -1,19 +1,22 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
-import 'package:grocceryshopp/pages/intropage.dart';
+import 'package:grocceryshopp/screen/home/Homepage.dart';
+import 'package:grocceryshopp/screen/welcome/splashscreen.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
+  
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      debugShowCheckedModeBanner: false ,
-      home: intropage(),);
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Homepage(),
+    );
   }
 }
-
